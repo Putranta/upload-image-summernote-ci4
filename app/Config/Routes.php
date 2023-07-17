@@ -29,7 +29,10 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Post::index');
+$routes->post('/post/save', 'Post::save');
+$routes->post('/post/upload_image', 'Post::upload_image');
+$routes->post('/post/delete_image', 'Post::delete_image');
 
 /*
  * --------------------------------------------------------------------
